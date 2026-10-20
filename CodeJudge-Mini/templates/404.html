@@ -1,0 +1,2 @@
+{% extends "base.html" %}{% block title %}Page not found · CodeJudge-Mini{% endblock %}
+{% block content %}<div class="empty-page"><div class="brand-mark">404</div><h1>That page is not here</h1><p>Return to the dashboard and continue your practice.</p><a class="btn btn-primary" href="{{ url_for('dashboard.dashboard') if session.get('user_id') else url_for('auth.login') }}">Go back</a></div>{% endblock %}
